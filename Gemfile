@@ -28,16 +28,15 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 #Production environment - Mostly for Heroku
 group :production do
-  #gem 'pg', '0.20.0'
+  gem 'pg', '0.20.0'
+  gem 'dalli'
 end
-
-gem 'sqlite3', '~> 1.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
-  #gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
