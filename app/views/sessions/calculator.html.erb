@@ -1,4 +1,10 @@
-<h1>Mass Index Calculator</h1>
-<%= button_to "Logout", '/logout', method: :get%>
-<p><%= current_user.username%></p>
-
+<h1>Body Mass Index Calculator</h1>
+<h4>User:<%= current_user.username%> - <%= link_to "Logout", "/logout", method: :get %> </h4>
+<div id="calculator">
+  <label for="body_mass">Body Mass</label>
+  <input type="number" id="body_mass" placeholder="0.0"/>
+  <label for="height">Height</label>
+  <input type="number" id="height" placeholder="0.0"/>
+  <button id="calculate_mass">Calculate</button>
+  <div id="body_mass_index"></div>
+</div>
