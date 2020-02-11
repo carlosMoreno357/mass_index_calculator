@@ -7,6 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+//Main javascript features for mass index calculations
+require("packs/massIndex")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
