@@ -1,10 +1,24 @@
-<h1>Welcome</h1>
 
-<% if logged_in? %>
-  <h1> Hey there, you are logged in <%= current_user.username %>/!</h1>
-  <%= button_to "Logout", '/logout', method: :get %>
-<%else%>
-  <%= button_to "Login", '/login', method: :get %>
-  <%= button_to "Sign Up", '/users/new', method: :get %>
-<%end%>
+    <div class="ui grid centered cards">
+      <div class="card ui item ten wide column">
+        <div class="content">
+          <div class="header">Body Mass Index Calculator</div>
+          <div class="description">
+            <p>Start being aware of your Body Mass Index, you cannot improve what you can't measure :)</p>
+            <% if logged_in? %>
+              <h1 class="ui header"> Hey there, you are logged in <%= current_user.username %>/!</h1>
+              <%= button_to "Logout", '/logout', method: :get, :class => "ui button" %>
+            <%else%>
+              <div class="ui buttons">
+                <%= button_to "Login", '/login', method: :get, :class => "ui primary button" %>
+                <div class="or"></div>
+                <%= button_to "Sign Up", '/users/new', method: :get , :class =>"ui positive button"%>
+              </div>
+            <%end%>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
 
