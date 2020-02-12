@@ -22,5 +22,4 @@ test:
 
 production:
   <<: *default
-  encoding: utf8
-  pool: 15
+  database: db/production.sqlite3
