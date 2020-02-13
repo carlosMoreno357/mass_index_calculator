@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("semantic-ui")
+//require("semantic-ui")
 //Main javascript features for mass index calculations
 require("packs/massIndex")
 

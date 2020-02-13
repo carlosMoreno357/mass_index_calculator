@@ -1,10 +1,20 @@
 <h1>Body Mass Index Calculator</h1>
-<h4>User:<%= current_user.username%> - <%= link_to "Logout", "/logout", method: :get %> </h4>
-<div id="calculator">
-  <label for="body_mass">Body Mass</label>
-  <input type="number" id="body_mass" placeholder="0.0"/>
-  <label for="height">Height</label>
-  <input type="number" id="height" placeholder="0.0"/>
-  <button id="calculate_mass">Calculate</button>
-  <div id="body_mass_index"></div>
+
+<h4> <%= link_to 'Logout', '/logout', method: :get, :class => "ui red tag label" %> User:<%= current_user.username%> </h4>
+<div class="ui divider"></div>
+<div class="ui grid">
+  <div id="calculator" class="ui form eight wide column">
+    <div class = "inline fields">
+      <div class="eight wide field">
+        <label for="body_mass">Body Mass</label>
+        <input type="number" id="body_mass" min="0" max="500.00" placeholder="0.0"/>
+      </div>
+      <div class = "eight wide field">
+        <label for="height">Height</label>
+        <input type="number" id="height" min="0.00" max="3.00" placeholder="0.0"/>
+      </div>
+      <button id="calculate_mass" class="ui primary button">Calculate</button>
+    </div>
+    <div id="body_mass_index" class = "ui floating message hidden content"></div>
+  </div>
 </div>
