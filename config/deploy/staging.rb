@@ -22,6 +22,12 @@
 # role :db,  %w{deploy@example.com}
 
 
+set :stage, :production
+
+role :app, %w{ubuntu@52.14.130.212}
+role :web, %w{ubuntu@52.14.130.212}
+role :db,  %w{ubuntu@52.14.130.212}
+
 
 # Configuration
 # =============
