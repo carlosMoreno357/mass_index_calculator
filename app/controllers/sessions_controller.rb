@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized, only: [:new, :create, :welcome]
-  
+
   def new
   end
 
@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/welcome'
     else
+      flash[:danger] = "Invalid credentials"
       redirect_to '/login'
     end
   end
